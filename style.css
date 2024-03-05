@@ -94,6 +94,9 @@ button:hover {
     background-size: cover;
     background-position: -50px;
 }
+.right img {
+    display: none;
+}
 
 .sec-section {
     min-height: 100vh;
@@ -163,18 +166,29 @@ button:hover {
 }
 
 @media only screen and (max-width: 884px) {
-    .right {
-        display: none;
-    }
-    .left {
-        width: 100%;
-    }
+    
     .nav-links li {
         padding: 10px 1.6vw;
+    }
+    .right {
+        background-position: -125px;
     }
 }
 
 @media only screen and (max-width: 720px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    .left, .right {
+        width: 100%;
+    }
+    .right img {
+        display: block;
+        width: 100%;
+        
+    }
+
     .nav-links li:last-child, .nav-links li:nth-child(5)  {
         display: none;
     }
